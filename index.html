@@ -203,6 +203,40 @@
           </div>
         </div>
       </div>
+
+      <section id="my-threeD">
+        <div class="container">
+          <div class="row text-center mb-3">
+            <div class="col">
+              <h2>My Hobby</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-3 animasithreeD">
+              <div class="threeD-box">
+                <h4 class="threeD-name">Bermain</h4>
+                <img src="img/3d/1.png" alt="threeDOne" class="threeDone" />
+                <a href="#" class="btn btn-light threeD-detail-button">Show Details</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3 animasithreeD">
+              <div class="threeD-box">
+                <h4 class="threeD-name">Hacking</h4>
+                <img src="img/3d/2.png" alt="threeDTwo" class="threeDone" />
+                <a href="#" class="btn btn-light threeD-detail-button">Show Details</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3 animasithreeD">
+              <div class="threeD-box">
+                <h4 class="threeD-name">Hacking V2</h4>
+                <img src="img/3d/3.png" alt="threeDThree" class="threeDone" />
+                <a href="#" class="btn btn-light threeD-detail-button">Show Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"
@@ -217,7 +251,7 @@
       <div class="container" id="gallery">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>gallery</h2>
+            <h2>Gallery</h2>
           </div>
         </div>
         <div class="row">
@@ -361,6 +395,20 @@
       });
     </script>
 
+    <script>
+      const animasithreeD = document.querySelectorAll('.animasithreeD');
+
+      animasithreeD.forEach((anmkr, i) => {
+        anmkr.dataset.aos = 'fade-right';
+        anmkr.dataset.aosDelay = i * 200;
+        anmkr.dataset.aosDuration = 1000;
+      });
+
+      AOS.init({
+        once: true,
+      });
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/TextPlugin.min.js"></script>
     <script>
@@ -420,6 +468,13 @@
             console.log('Success!', response);
           })
           .catch((error) => console.error('Error!', error.message));
+      });
+    </script>
+    <script type="text/javascript" src="tilt/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll('.threeD-box'), {
+        max: 35,
+        speed: 1000,
       });
     </script>
   </body>

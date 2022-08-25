@@ -22,3 +22,92 @@ section {
 #gallery .row > * {
   padding: 0;
 }
+
+.threeD-box {
+  position: relative;
+  background-color: #4b0082;
+  border-radius: 10px;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+
+.threeD-box::before {
+  content: 'MY';
+  position: absolute;
+  color: white;
+  font-size: 4em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.threeD-box:hover::before {
+  opacity: 0.2;
+}
+
+.threeD-box::after {
+  content: 'HIBURAN';
+  position: absolute;
+  color: white;
+  font-size: 4em;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.threeD-box:hover::after {
+  opacity: 0.2;
+}
+
+.threeD-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+  opacity: 0;
+  transform: translate3d(0, 0, 50px);
+  transition: 0.5s;
+}
+
+.threeD-box:hover .threeD-name {
+  top: 20px;
+  opacity: 1;
+}
+
+.threeD-detail-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.threeD-box:hover .threeD-detail-button {
+  opacity: 1;
+  bottom: 20px;
+}
+
+.threeDone {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate3d(-50%, -52%, 80px);
+  max-width: 250px;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+.threeD-box:hover .threeDone {
+  transform: translate3d(-50%, -52%, 100px) rotate(5deg) scale(1.2);
+}
