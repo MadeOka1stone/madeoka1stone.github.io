@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Environment and credentials
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+
+# Cloudflare local configuration
+.wrangler/
+wrangler.jsonc
+
+# Internal and temporary files
+.openai/
+tmp/
+output/
+tools/
+github-profile/
+
+# CV source documents
+*.docx
+
+# Logs and system files
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
